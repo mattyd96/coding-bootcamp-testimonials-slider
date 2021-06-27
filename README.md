@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/built-using-flexbox-grid-js-and-sass-93Q7r7al3](https://www.frontendmentor.io/solutions/built-using-flexbox-grid-js-and-sass-93Q7r7al3)
+- Live Site URL: [https://hardcore-keller-83a735.netlify.app/](https://hardcore-keller-83a735.netlify.app/)
 
 ## My process
 
