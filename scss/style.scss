@@ -10,37 +10,52 @@ body {
     margin: 0;
 }
 
-.container {
-    display: grid;
-    margin: auto;
-    max-width: 84rem;
-}
-
-main {
-    display: grid;
-}
-
-.articles {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    max-width: 71.875rem;
-    margin: auto;
-    display: grid;
-}
 
 .testimony {
-    grid-column: 1/2;
-    grid-row: 1/2;
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
-    margin:auto;
-    opacity: 0;
+    justify-content: center;
+    margin: 8rem 2rem;
+
+    .image-and-nav {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        margin-left: -9rem;
+
+        .profile-nav {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            z-index: 10;
+        }
+
+        .bg-pattern {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        } 
+    }
+
+    .text-section {
+        display: grid;
+    }
+
+    .quotes {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-top: -2.2rem;
+        margin-left: 6rem;
+    }
 
     .text {
+        grid-column: 1/2;
+        grid-row: 1/2;
         z-index: 200;
         color: var(--primary-font-color);
 
         .hero-text {
+            grid-column: 1/2;
+            grid-row: 1/2;
             font-size: 2rem;
             font-weight: 300;
             max-width: 40rem;
@@ -60,22 +75,12 @@ main {
             }
         }
     }
-
-    figure { 
-        margin: 0 0 0 -4.5rem;
-        z-index: 100;
-
-        img {
-            border-radius: .25rem;
-            max-width: 100%;
-        }
-    }
 }
 
 
 .slider-buttons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin: -1.7rem 0;
     z-index: 1000;
 
@@ -86,44 +91,13 @@ main {
     }
 
     #next {
-        margin-right: 25rem;
         border-radius: 0 3rem 3rem 0;
     }
 
     #prev {
         border-radius: 3rem 0 0 3rem;
+        margin-left: 5rem;
     }
-}
-
-
-.background {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    z-index: -10;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    margin: 0 2rem;
-}
-
-.quotes {
-    margin-top: -17.5rem;
-    margin-left: 9rem;
-    flex-grow: 1;
-    flex-shrink: 1;
-    z-index: 10;
-}
-
-.bg-pattern {
-    margin-bottom: .5rem;
-    flex-basis: 5rem;
-    flex-grow: 1;
-    flex-shrink: 1;
-    img {
-        max-width: 43.56rem;
-    }
-    
 }
 
 .bottom-curve {
@@ -136,69 +110,55 @@ main {
 
 
 
-@media(max-width: 1150px) {
-
+@media(max-width: 950px) {
     .testimony {
-        flex-direction: column-reverse;
-        justify-content: center;
-        margin-top: 0rem;
+        flex-direction: column;
+        margin-top: 2rem;
+        text-align: center;
 
-        .text {
-            text-align: center;
-            margin-top: 10rem;
+        .image-and-nav {
+            margin: 0 auto;
 
-            .hero-text {
-                font-size: 1.5rem;
-                font-weight: 300;
-                max-width: 90%;
+            .profile-pic {
+                max-width: 65vw;
             }
 
-            .info {
-                justify-content: center;
+            .bg-pattern {
+                max-width: 98%;
             }
         }
 
-        figure { 
-            margin: 3rem auto;
-            padding: 0;
-            max-width: 100vw;
-            img {
-                max-width: 65vw;
+        .text-section {
+            margin-top: 3rem;  
+        }
+
+        .quotes {
+            margin: 0 auto;
+            width: 4.1rem;
+        }
+
+        .text {
+            .hero-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        .info {
+            flex-direction: column;
+            justify-content: center;
+
+            p {
+                margin: 0;
             }
         }
     }
 
     .slider-buttons {
         justify-content: center;
-        margin: auto;
-        margin-top: auto;
-    
-        button {
-            height: 3rem;
-            width: 3rem;
-            border-style: none;
+
+        #prev {
+            margin-left: 0rem;
         }
-    
-        #next {
-            margin-right: 0;
-        }
-    }
-    
-    .background {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: none;
     }
 
-    .quotes {
-        margin-top: 5rem;
-        margin-left: 0;
-    }
-
-    .bg-pattern {
-        margin-top: 2rem;
-        img {
-            max-width: 83vw;
-        }
-    }
 }
