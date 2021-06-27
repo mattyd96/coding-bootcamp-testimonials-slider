@@ -113,6 +113,7 @@ body {
 @media(max-width: 950px) {
     .testimony {
         flex-direction: column;
+        margin: 0;
         margin-top: 2rem;
         text-align: center;
 
@@ -124,12 +125,13 @@ body {
             }
 
             .bg-pattern {
-                max-width: 98%;
+                max-width: 90%;
             }
         }
 
         .text-section {
-            margin-top: 3rem;  
+            margin-top: 3rem;
+            padding: 0 2rem;  
         }
 
         .quotes {
