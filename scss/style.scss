@@ -88,6 +88,10 @@ body {
         height: 3rem;
         width: 3rem;
         border-style: none;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     #next {
